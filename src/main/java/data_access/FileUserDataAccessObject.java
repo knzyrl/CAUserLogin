@@ -109,4 +109,9 @@ public class FileUserDataAccessObject implements SignupUserDataAccessInterface,
         // Not implemented because DB and File do not track active sessions.
     }
 
+    @Override
+    public String getCurrentUser() {
+        return "";
+    }
+
 }

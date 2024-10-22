@@ -155,4 +155,9 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
     public void setCurrentUser(String username) {
         // Not implemented because DB and File do not track active sessions.
     }
+
+    @Override
+    public String getCurrentUser() {
+        return "";
+    }
 }
