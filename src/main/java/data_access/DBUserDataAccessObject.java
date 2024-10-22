@@ -78,7 +78,6 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
 
             final JSONObject responseBody = new JSONObject(response.body().string());
 
-            //                throw new RuntimeException(responseBody.getString("message"));
             return responseBody.getInt(STATUS_CODE_LABEL) == SUCCESS_CODE;
         }
         catch (IOException | JSONException ex) {
@@ -150,5 +149,10 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
         catch (IOException | JSONException ex) {
             throw new RuntimeException(ex);
         }
+    }
+
+    @Override
+    public void setCurrentUser(String username) {
+        // Not implemented because DB and File do not track active sessions.
     }
 }

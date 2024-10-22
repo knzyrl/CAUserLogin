@@ -103,4 +103,10 @@ public class FileUserDataAccessObject implements SignupUserDataAccessInterface,
         accounts.put(user.getName(), user);
         save();
     }
+
+    @Override
+    public void setCurrentUser(String username) {
+        // Not implemented because DB and File do not track active sessions.
+    }
+
 }
